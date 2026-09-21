@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- CODE BY OisinMccarthy(LEGA11) -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout — Red Siren</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Chivo:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="basket">
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="site-nav"></header>
+
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <ol class="progress">
+        <li class="done">Basket</li><li aria-current="step">Details</li><li>Payment</li><li>Confirmation</li>
+      </ol>
+      <h1>Your details</h1>
+      <p class="lede">We use these to put your name on the door list and send your booking reference.</p>
+    </div>
+  </div>
+
+  <section style="padding-top:1rem">
+    <div class="checkout-layout">
+      <div>
+        <div class="empty-state" id="checkout-empty" hidden>
+          <h3>Your basket is empty</h3>
+          <p class="muted">Add some tickets before checking out.</p>
+          <p><a class="btn" href="events.html">Browse events</a></p>
+        </div>
+
+        <form class="panel" id="checkout-form" novalidate>
+          <div class="form-grid">
+            <label class="field" for="checkout-firstName"><span>First name</span>
+              <input type="text" id="checkout-firstName" autocomplete="given-name" required>
+              <span class="field-error" id="error-firstName" role="alert"></span>
+            </label>
+            <label class="field" for="checkout-lastName"><span>Last name</span>
+              <input type="text" id="checkout-lastName" autocomplete="family-name" required>
+              <span class="field-error" id="error-lastName" role="alert"></span>
+            </label>
+            <label class="field span-2" for="checkout-email"><span>Email address</span>
+              <input type="email" id="checkout-email" autocomplete="email" required>
+              <span class="field-hint">Your booking reference goes here.</span>
+              <span class="field-error" id="error-email" role="alert"></span>
+            </label>
+            <label class="field span-2" for="checkout-phone"><span>Phone number</span>
+              <input type="tel" id="checkout-phone" autocomplete="tel" required>
+              <span class="field-hint">Only used if a show is moved or cancelled.</span>
+              <span class="field-error" id="error-phone" role="alert"></span>
+            </label>
+          </div>
+          <div class="btn-row">
+            <button type="submit" class="btn">Continue to payment</button>
+            <a class="btn btn-ghost" href="basket.html">Back to basket</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="panel summary-panel" id="checkout-summary"></div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="js/basket.js"></script>
+<script src="js/site.js"></script>
+<script src="js/events.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>
+<!-- CODE BY OisinMccarthy(LEGA11) -->

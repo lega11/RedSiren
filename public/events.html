@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- CODE BY OisinMccarthy(LEGA11) -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All events — Red Siren</title>
+<meta name="description" content="Search, filter and sort every Red Siren event.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Chivo:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="events">
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="site-nav"></header>
+
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <h1>All events</h1>
+      <p class="lede">Everything we have announced. Filter it down, or search for a band, venue or night.</p>
+    </div>
+  </div>
+
+  <section style="padding-top:1rem">
+    <div class="wrap">
+      <form class="filters" id="filter-form" role="search">
+        <label class="field span-2" for="filter-search"><span>Search</span>
+          <input type="search" id="filter-search" placeholder="Band, venue or keyword">
+        </label>
+        <label class="field" for="filter-category"><span>Category</span>
+          <select id="filter-category"><option value="">All categories</option></select>
+        </label>
+        <label class="field" for="filter-location"><span>Location</span>
+          <select id="filter-location"><option value="">All locations</option></select>
+        </label>
+        <label class="field" for="filter-date"><span>On or after</span>
+          <input type="date" id="filter-date">
+        </label>
+        <label class="field" for="filter-price"><span>Tickets from</span>
+          <select id="filter-price">
+            <option value="">Any price</option>
+            <option value="1000">Under &euro;10</option>
+            <option value="1500">Under &euro;15</option>
+            <option value="2000">Under &euro;20</option>
+            <option value="3000">Under &euro;30</option>
+          </select>
+        </label>
+        <label class="field" for="filter-sort"><span>Sort by</span>
+          <select id="filter-sort">
+            <option value="date">Date, soonest first</option>
+            <option value="price-asc">Price, low to high</option>
+            <option value="price-desc">Price, high to low</option>
+            <option value="name">Name, A to Z</option>
+          </select>
+        </label>
+        <div class="filter-actions">
+          <button type="button" class="btn btn-ghost" id="filter-reset">Clear filters</button>
+        </div>
+      </form>
+
+      <p class="muted" id="result-count" aria-live="polite"></p>
+      <div class="card-grid" id="events-grid"><p class="loading">Loading events…</p></div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="js/basket.js"></script>
+<script src="js/site.js"></script>
+<script src="js/events.js"></script>
+<script src="js/browse.js"></script>
+</body>
+</html>
+<!-- CODE BY OisinMccarthy(LEGA11) -->

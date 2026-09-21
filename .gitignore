@@ -1,0 +1,18 @@
+# Downloaded packages - recreated with "npm install", never committed
+node_modules/
+
+# Secrets - the real .env holds JWT_SECRET and must never be committed.
+# Server/env.example is the safe template and IS committed.
+.env
+
+# Logs and operating-system clutter
+*.log
+.DS_Store
+Thumbs.db
+
+# Stray lock file from running npm in the wrong folder.
+# The real one lives in Server/ and is committed.
+/package-lock.json
+
+# Leftover copy of this file under the wrong name
+gitignore.circ

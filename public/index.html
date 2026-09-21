@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- CODE BY OisinMccarthy(LEGA11) -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Red Siren — gig and club tickets in Cork</title>
+<meta name="description" content="Buy tickets for warehouse gigs, club nights and spoken word on the Cork docks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Chivo:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="site-nav"></header>
+
+<main id="main">
+  <div class="hero">
+    <div class="hero-inner">
+      <h1 class="headline">
+        <span class="knock">L</span><span class="knock">O</span><span class="knock">U</span><span class="knock">D</span><br>
+        <span class="hit">R</span><span class="hit">O</span><span class="hit">O</span><span class="hit">M</span><span class="hit">S</span>
+      </h1>
+      <p class="standfirst">Warehouse gigs, club nights and readings on the Cork docks. Book online, show your reference at the door.</p>
+
+      <form class="searchbar" id="home-search" role="search">
+        <label class="visually-hidden" for="home-search-input">Search events</label>
+        <input type="search" id="home-search-input" placeholder="Search bands, venues or nights">
+        <button type="submit" class="btn">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- The messages appear twice so the scroll can loop without a gap.
+       Screen readers get the list once, from the visually hidden copy. -->
+  <div class="band">
+    <p class="visually-hidden">Tickets on sale now. Six nights announced. Student prices on every show. Flat &euro;3 booking fee.</p>
+    <div class="band-track" aria-hidden="true">
+      <div class="band-set"><span>Tickets on sale now</span><span class="band-star">&#9733;</span><span>Six nights announced</span><span class="band-star">&#9733;</span><span>Student prices on every show</span><span class="band-star">&#9733;</span><span>Flat &euro;3 booking fee</span><span class="band-star">&#9733;</span></div>
+      <div class="band-set"><span>Tickets on sale now</span><span class="band-star">&#9733;</span><span>Six nights announced</span><span class="band-star">&#9733;</span><span>Student prices on every show</span><span class="band-star">&#9733;</span><span>Flat &euro;3 booking fee</span><span class="band-star">&#9733;</span></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head-row">
+        <h2 class="sec-head">Featured <span class="knock">this month</span></h2>
+        <a class="btn btn-ghost" href="events.html">See all events</a>
+      </div>
+      <div class="card-grid" id="featured-grid"><p class="loading">Loading events…</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="sec-head">Browse by <span class="knock">category</span></h2>
+      <div class="btn-row" id="category-row"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="sec-head">Upcoming <span class="knock">dates</span></h2>
+      <div class="card-grid" id="upcoming-grid"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="sec-head">How a <span class="knock">night runs</span></h2>
+      <div class="panel" style="max-width:62ch">
+        <dl class="event-facts" style="max-width:none">
+          <dt>Book</dt><dd>Pick your tickets and pay online. You need a free account.</dd>
+          <dt>Arrive</dt><dd>Doors are listed on each event. The list closes 15 minutes after.</dd>
+          <dt>Enter</dt><dd>Show your booking reference from My tickets. Free earplugs at the box.</dd>
+          <dt>Out</dt><dd>Everyone out by three. Keep it quiet on the walk — the flats back onto the yard.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="js/basket.js"></script>
+<script src="js/site.js"></script>
+<script src="js/events.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
+<!-- CODE BY OisinMccarthy(LEGA11) -->

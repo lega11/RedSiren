@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- CODE BY OisinMccarthy(LEGA11) -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payment — Red Siren</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Chivo:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="basket">
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="site-nav"></header>
+
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <ol class="progress">
+        <li class="done">Basket</li><li class="done">Details</li><li aria-current="step">Payment</li><li>Confirmation</li>
+      </ol>
+      <h1>Payment</h1>
+    </div>
+  </div>
+
+  <section style="padding-top:1rem">
+    <div class="checkout-layout">
+      <div>
+        <div class="empty-state" id="payment-empty" hidden>
+          <h3>Nothing to pay for</h3>
+          <p class="muted">Your basket is empty or your checkout details were lost. Start again from the basket.</p>
+          <p><a class="btn" href="basket.html">Back to basket</a></p>
+        </div>
+
+        <form class="panel" id="payment-form" novalidate>
+          <div class="pay-total-strip">
+            <span>Amount due</span>
+            <span data-order-total>&euro;0.00</span>
+          </div>
+
+          <p class="muted" style="font-size:.85rem">Paying as <span id="payment-name"></span></p>
+
+          <label class="field" for="pay-name"><span>Cardholder name</span>
+            <input type="text" id="pay-name" autocomplete="cc-name" required>
+            <span class="field-error" id="error-pay-name" role="alert"></span>
+          </label>
+
+          <label class="field" for="pay-card"><span>Card number</span>
+            <input type="text" id="pay-card" inputmode="numeric" placeholder="4242 4242 4242 4242" maxlength="19" required>
+            <span class="field-hint">Demo site — use any 16 digits. Nothing is charged or stored.</span>
+            <span class="field-error" id="error-pay-card" role="alert"></span>
+          </label>
+
+          <div class="form-grid">
+            <label class="field" for="pay-expiry"><span>Expiry date</span>
+              <input type="text" id="pay-expiry" inputmode="numeric" placeholder="MM/YY" maxlength="5" required>
+              <span class="field-error" id="error-pay-expiry" role="alert"></span>
+            </label>
+            <label class="field" for="pay-cvv"><span>CVV</span>
+              <input type="text" id="pay-cvv" inputmode="numeric" placeholder="123" maxlength="3" required>
+              <span class="field-error" id="error-pay-cvv" role="alert"></span>
+            </label>
+          </div>
+
+          <label class="field" for="pay-address"><span>Billing address</span>
+            <textarea id="pay-address" autocomplete="street-address" required></textarea>
+            <span class="field-error" id="error-pay-address" role="alert"></span>
+          </label>
+
+          <div class="btn-row">
+            <button type="submit" class="btn" id="pay-button">Pay</button>
+            <a class="btn btn-ghost" href="checkout.html">Back to details</a>
+          </div>
+
+          <p class="secure-note">This is a student project. Payment is simulated after validation — no card
+          details are sent anywhere, saved in your browser, or written to the database. A real site would
+          hand card entry to a provider such as Stripe.</p>
+        </form>
+      </div>
+
+      <div class="panel summary-panel" id="payment-summary">
+        <h2 style="font-size:1.3rem">Order summary</h2>
+        <div id="payment-lines"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="js/basket.js"></script>
+<script src="js/site.js"></script>
+<script src="js/events.js"></script>
+<script src="js/payment.js"></script>
+</body>
+</html>
+<!-- CODE BY OisinMccarthy(LEGA11) -->

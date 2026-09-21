@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- CODE BY OisinMccarthy(LEGA11) -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Red Siren</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Chivo:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="contact">
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="site-nav"></header>
+
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <h1>Contact</h1>
+      <p class="lede">Ticket problems, access requirements, or a demo for a future night.</p>
+    </div>
+  </div>
+
+  <section style="padding-top:1rem">
+    <div class="checkout-layout">
+      <div>
+        <form class="panel" id="contact-form" novalidate>
+          <p class="empty-state" id="contact-sent" hidden style="border-color:var(--ok);padding:1rem">
+            Thanks — your message is with us. We reply within two working days.
+          </p>
+
+          <div class="form-grid">
+            <label class="field" for="contact-name"><span>Your name</span>
+              <input type="text" id="contact-name" autocomplete="name" required>
+              <span class="field-error" id="error-contact-name" role="alert"></span>
+            </label>
+            <label class="field" for="contact-email"><span>Email address</span>
+              <input type="email" id="contact-email" autocomplete="email" required>
+              <span class="field-error" id="error-contact-email" role="alert"></span>
+            </label>
+          </div>
+
+          <label class="field" for="contact-subject"><span>What's it about?</span>
+            <select id="contact-subject" required>
+              <option value="">Choose a subject</option>
+              <option>A booking I made</option>
+              <option>Access requirements</option>
+              <option>Playing at a Red Siren night</option>
+              <option>Something else</option>
+            </select>
+            <span class="field-error" id="error-contact-subject" role="alert"></span>
+          </label>
+
+          <label class="field" for="contact-message"><span>Message</span>
+            <textarea id="contact-message" required></textarea>
+            <span class="field-hint">If it's about a booking, include your reference (it looks like RS-4F9K2Q).</span>
+            <span class="field-error" id="error-contact-message" role="alert"></span>
+          </label>
+
+          <div class="btn-row">
+            <button type="submit" class="btn">Send message</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="panel summary-panel">
+        <h2 style="font-size:1.3rem">Other ways</h2>
+        <dl class="event-facts" style="max-width:none">
+          <dt>Email</dt><dd><a href="mailto:hello@redsiren.ie">hello@redsiren.ie</a></dd>
+          <dt>Bookings</dt><dd><a href="mailto:bookings@redsiren.ie">bookings@redsiren.ie</a></dd>
+          <dt>Phone</dt><dd>+353 21 123 4567</dd>
+          <dt>Post</dt><dd>Horgan's Quay, Cork, T23 XY12</dd>
+        </dl>
+        <p class="muted" style="font-size:.85rem">Phone is staffed weekdays 10:00&ndash;17:00. On show
+        nights nobody is at a desk — find a black jacket at the door instead.</p>
+        <p><a class="btn btn-ghost" href="faq.html">Check the FAQ first</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="js/basket.js"></script>
+<script src="js/site.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>
+<!-- CODE BY OisinMccarthy(LEGA11) -->
